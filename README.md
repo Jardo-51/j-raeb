@@ -60,3 +60,7 @@ The actual microservice which provides the API.
 ### book-eshop
 
 A sample microservice which demonstrates how to connect to the API.
+
+## Class Hierarchy
+
+![Class diagram](img/classes.drawio.png)
