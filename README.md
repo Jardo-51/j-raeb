@@ -18,6 +18,8 @@ The basic principle is extracting the microservice API into a project which is s
 
 Furthermore, the `book-storage-api` is divided into 3 modules, each compiled into a separate Maven artifact: `book-storage-api-common-v1`, `book-storage-api-server-v1`, `book-storage-api-client-v1`.
 
+![Module diagram](img/modules.png)
+
 ## API Module Descriptions
 
 ### book-storage-api-common-v1
