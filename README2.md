@@ -6,7 +6,7 @@ This project aims to describe best practices with regards to defining, developin
 
 I first came up with this concept around 2017 (7 years ago at the time of writing this) when I was programming microservices in Java with Maven and Spring.
 
-Over the years, I have used this concept successfully in several projects, and I have been constantly improving it until today, based on practical experience  (and I am open to further improvements in the future).
+Over the years, I have used this concept successfully in several projects, and I have been constantly improving it until today, based on practical experience  (and I am open to suggestions for further improvements).
 
 ## Basic Idea
 
