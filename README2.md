@@ -10,11 +10,20 @@ Over the years, I have used this concept successfully in several projects, and I
 
 ## Basic Idea
 
-The standard way of implementing a REST API server in Java is by using Spring Web (or Webflux for reactive projects). In Spring Web you define a REST controller by putting annotation on a class. Here is an example:
+The standard way of implementing a REST API server in Java is by using [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial) (or Spring Webflux for reactive projects). In Spring Web you define a REST controller by putting annotations on a class. Here is an example:
 
 ```java
+@Slf4j
+@RestController
+public class EmailController {
 
+	@PostMapping(path = "/api/email/send")
+	public EmailSendingResultDto sendEmail(@RequestBody EmailDto emailDto) {
+		log.info("Sending email '{}'", emailDto);
+		return EmailSendingResultDto.OK;
+	}
 
+}
 ```
 
 On the client side, we can also use this declarative approach by utilizing Feign (or Feign Reactive for reactive projects). In Feign, you can define a REST client by annotating an interface:
