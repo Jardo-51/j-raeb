@@ -26,10 +26,16 @@ public class EmailController {
 }
 ```
 
-On the client side, we can also use this declarative approach by utilizing Feign (or Feign Reactive for reactive projects). In Feign, you can define a REST client by annotating an interface:
+On the client side, we can also use this declarative approach by utilizing [Feign](https://www.javatodev.com/how-to-use-feign-client-in-spring-boot/) (or Feign Reactive for reactive projects). In Feign, you can define a REST client by annotating an interface:
 
 ```java
+@FeignClient(name = "emailClient", url = "${integration.email.url}")
+public interface EmailClient {
 
+	@PostMapping(path = "/api/email/send")
+	EmailSendingResultDto sendEmail(@RequestBody EmailDto emailDto);
+
+}
 ```
 
 So we can see tha both on the client and server side, we have an annotated class (interface), with the API definition. This is basically duplicate code. So why not extract it into a common ancestor?
