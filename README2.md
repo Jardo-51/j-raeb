@@ -38,7 +38,7 @@ public interface EmailClient {
 }
 ```
 
-So we can see tha both on the client and server side, we have an annotated class (interface), with the API definition. This is basically duplicate code. So why not extract it into a common ancestor?
+We can see that both on the client and server side, we have an annotated class (interface), with the API definition. This is basically duplicate code. So why not extract it into a common ancestor?
 
 ### Extracting API Definitions
 
