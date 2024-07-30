@@ -45,26 +45,42 @@ We can see that both on the client and server side, we have an annotated class (
 We can extract the API definitions into a common interface like this:
 
 ```java
+public interface EmailApi {
 
+	@PostMapping(path = "/api/email/send")
+	EmailSendingResultDto sendEmail(@RequestBody EmailDto emailDto);
+
+}
 ```
 
 Then we can define the controller like this:
 
 ```java
+@Slf4j
+@RestController
+public class EmailController implements EmailApi {
 
+	@Override
+	public EmailSendingResultDto sendEmail(EmailDto emailDto) {
+		log.info("Sending email '{}'", emailDto);
+		return EmailSendingResultDto.OK;
+	}
 
+}
 ```
 
 ... and the Feign client like this:
 
 ```java
+@FeignClient(name = "emailClient", url = "${integration.email.url}")
+public interface EmailClient extends EmailApi {
 
-
+}
 ```
 
 The controller class and the client interface are most likely in two separate projects (microservices). And for that reason, we have to create a library, which contains the API definition.
 
-Now both the server and client microservice can include this library.
+Now both the server and client microservice can use this library.
 
 Having the API definitions in one shared library also gives us the ability to document and version API changes - every time there is a change to the API, we create a new version of the library project (using semantic versioning) and document the changes in a changelog file.
 
