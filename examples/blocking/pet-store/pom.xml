@@ -23,7 +23,7 @@
 
 		<dependency>
 			<groupId>com.jardoapps.jraeb</groupId>
-			<artifactId>blocking-email-api-client-v1</artifactId>
+			<artifactId>blocking-email-api-v1</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 

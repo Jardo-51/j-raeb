@@ -1,9 +1,10 @@
-package com.jardoapps.jraeb.blocking.email.api.v1;
+package com.jardoapps.jraeb.blocking.email.api.v1.server;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jardoapps.jraeb.blocking.email.api.v1.dto.EmailDto;
-import com.jardoapps.jraeb.blocking.email.api.v1.dto.EmailSendingResultDto;
+import com.jardoapps.jraeb.blocking.email.api.v1.common.EmailApi;
+import com.jardoapps.jraeb.blocking.email.api.v1.common.dto.EmailDto;
+import com.jardoapps.jraeb.blocking.email.api.v1.common.dto.EmailSendingResultDto;
 
 import lombok.extern.slf4j.Slf4j;
 

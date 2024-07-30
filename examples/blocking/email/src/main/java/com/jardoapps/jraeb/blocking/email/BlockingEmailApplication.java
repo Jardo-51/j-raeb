@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.jardoapps.jraeb.blocking.email.api.v1.EmailController;
+import com.jardoapps.jraeb.blocking.email.api.v1.server.EmailController;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = {
