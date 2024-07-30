@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jardoapps.jraeb.blocking.petstore.client.EmailClient;
-import com.jardoapps.jraeb.blocking.petstore.dto.EmailDto;
-import com.jardoapps.jraeb.blocking.petstore.dto.EmailSendingResultDto;
+import com.jardoapps.jraeb.blocking.email.api.v1.EmailClient;
+import com.jardoapps.jraeb.blocking.email.api.v1.dto.EmailDto;
+import com.jardoapps.jraeb.blocking.email.api.v1.dto.EmailSendingResultDto;
 
 import lombok.extern.slf4j.Slf4j;
 

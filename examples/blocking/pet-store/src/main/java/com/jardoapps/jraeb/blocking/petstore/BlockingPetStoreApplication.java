@@ -4,8 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients
+import com.jardoapps.jraeb.blocking.email.api.v1.EmailClient;
+
 @SpringBootApplication
+@EnableFeignClients(basePackageClasses = {
+		EmailClient.class,
+})
 public class BlockingPetStoreApplication {
 
 	public static void main(String[] args) {
